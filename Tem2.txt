@@ -6,4 +6,6 @@ int main()
 	char ABC[] = "abcdefghijklmnopqrstuvwxyz";
 	char Message[255];//Массив для текста
 	cout<<"enter the string"<< endl;
+	cout << "enter the key" << endl;
+	cin >> k;
 }
