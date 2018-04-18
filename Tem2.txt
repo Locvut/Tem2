@@ -8,4 +8,19 @@ int main()
 	cout<<"enter the string"<< endl;
 	cout << "enter the key" << endl;
 	cin >> k;
+	for (n = 0; n < 255; n++)
+	{
+		for (i = 0; i < 27; i++)
+		
+			if (Message[n] == ABC[i])
+			{
+				if (i >= 27)
+					Message[n] = ABC[i - 27];
+				else
+					Message[n] = ABC[i + k];//сдвигаем вправо на показания шага ключа
+				//break;//принудительно выходим из цикла
+				cout << Message[n] << endl;
+				return 0;
+			}
+		}
 }
