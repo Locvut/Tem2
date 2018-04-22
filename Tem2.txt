@@ -1,26 +1,9 @@
 #include<iostream>
+#include <string>
 using namespace std;
 int main()
 {
-	int i = 0, n=0, k;
-	char ABC[] = "abcdefghijklmnopqrstuvwxyz";
-	char Message[255];//ћассив дл€ текста
-	cout<<"enter the string"<< endl;
-	cout << "enter the key" << endl;
-	cin >> k;
-	for (n = 0; n < 255; n++)
-	{
-		for (i = 0; i < 27; i++)
-		
-			if (Message[n] == ABC[i])
-			{
-				if (i >= 27)
-					Message[n] = ABC[i - 27];
-				else
-					Message[n] = ABC[i + k];//сдвигаем вправо на показани€ шага ключа
-				//break;//принудительно выходим из цикла
-				cout << Message[n] << endl;
-				return 0;
-			}
-		}
+	string str;
+	int key;
+	cout << "enter the string: ";
 }
