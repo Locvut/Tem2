@@ -6,4 +6,13 @@ int main()
 	string str;
 	int key;
 	cout << "enter the string: ";
+	getline(cin, str);
+	cout << "enter the key: ";
+	cin >> key;
+
+	for (int i = 0; i < str.length(); i++)
+		str[i] = (str[i] + key);
+
+	cout << "code string: " << str << '\n';
+	return 0;
 }
