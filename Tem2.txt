@@ -11,7 +11,16 @@ int main()
 	cin >> key;
 
 	for (int i = 0; i < str.length(); i++)
+	 {
+
+		while (str[i] != '\0')
+		{
+		if (str[i] + key < 'z')
 		str[i] = (str[i] + key);
+		else
+		str[i] = (str[i] - 26 + key);
+		i++;
+		}
 
 	cout << "code string: " << str << '\n';
 	return 0;
