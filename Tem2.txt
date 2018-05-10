@@ -9,7 +9,10 @@ int main()
 	getline(cin, str);
 	cout << "enter the key: ";
 	cin >> key;
-
+	for (int i = 0; i < str.length(); i++) 
+	{
+		if (str[i] == ' ') str.erase(i, 1);
+	}	
 	for (int i = 0; i < str.length(); i++)
 	 {
 
