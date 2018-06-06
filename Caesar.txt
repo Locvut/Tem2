@@ -1,0 +1,16 @@
+#pragma once
+#include<string>
+#include<iostream>
+#include <exception>
+using namespace std;
+class  Ceasar
+{
+private:
+	string str;
+	int key;
+
+public:
+	string encrypt(string str);
+	string decrypt(string str);
+	Ceasar(unsigned int key) :key(key) {};
+};

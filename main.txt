@@ -1,0 +1,47 @@
+#include<string>
+#include<iostream>
+#include <exception>
+#include "Caesar.h"
+using namespace std;
+int main(int argc, char **argv)
+{
+	int i, way;
+	string str;
+	unsigned int key;
+	cout << "enter the string: ";
+	getline(cin, str);
+	cout << "enter the key: ";
+	try {
+		cin >> key;
+
+		if ((key > 26) | (key <= 0))
+		{
+			throw 123;
+		}
+	}
+	catch (int i)
+	{
+		while ((key > 26) | (key <= 0))
+		{
+			cout << "enter the key in the range from 1 to 25 ";
+			cin >> key;
+		}
+	}
+	Ceasar x(key);
+	string z_text = x.encrypt(str);
+	string r_text = x.decrypt(str);
+	cout << "press 1 for encryption or 2 for decryption " << endl;
+	cin >> way;
+	if (way == 1)
+	{
+		cout << "encrypt:" << z_text << endl;
+	}
+	else  if(way == 2)
+	{
+		cout << "decrypt:" << r_text << endl;
+	}
+	else
+	{
+		cout << "Press 1 or 2" <<  endl;
+	}
+}
